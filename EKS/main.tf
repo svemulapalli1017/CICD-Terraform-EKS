@@ -53,10 +53,10 @@ module "eks" {
   }
 }
 
-data "aws_eks_cluster" "cluster" {
+data "aws_eks_cluster" "cluster_main" {
   name = module.eks.cluster_id
 }
 
-data "aws_eks_cluster_auth" "cluster" {
+data "aws_eks_cluster_auth" "cluster_auth_main" {
   name = module.eks.cluster_id
 }
